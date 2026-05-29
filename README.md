@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# 🎨 ERC-721 NFT Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack decentralized application (dApp) built on the **Polygon Amoy Testnet** that allows users to seamlessly mint, list, and trade ERC-721 Non-Fungible Tokens (NFTs). 
 
-## Available Scripts
+The platform features decentralized storage for NFT assets and metadata using **IPFS (via Pinata)** and ensures a smooth user experience by automatically prompting users to switch to or add the Amoy testnet in their MetaMask wallets.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Web3 Wallet Integration:** Connects securely with MetaMask.
+* **Smart Network Switching:** Automatically detects and switches to the Polygon Amoy Testnet (or prompts the user to add it if missing).
+* **Decentralized Minting:** Uploads image files and JSON metadata directly to IPFS via Pinata before minting the token on-chain.
+* **Marketplace Functionality:** * **List NFTs:** Owners can list their minted NFTs for sale in `POL`.
+  * **Buy NFTs:** Users can browse the marketplace and purchase listed NFTs.
+* **Real-time Data Fetching:** Reads directly from the smart contract to render currently listed NFTs and their IPFS metadata.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Frontend:** React.js
+* **Web3 Library:** ethers.js (v6)
+* **Storage:** IPFS & Pinata API (Axios & Fetch)
+* **Blockchain:** Polygon Amoy Testnet
+* **Smart Contracts:** Solidity (ERC-721 standard)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Before running this project locally, ensure you have the following installed:
+* [Node.js](https://nodejs.org/) (v16 or higher recommended)
+* [MetaMask](https://metamask.io/) browser extension
+* A [Pinata](https://www.pinata.cloud/) account for IPFS API keys
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/showrayy28/NFT_marketplace.git](https://github.com/showrayy28/NFT_marketplace.git)
+cd NFT_marketplace
