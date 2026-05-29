@@ -1,38 +1,240 @@
+/* App.css - High Contrast & Clean Web3 Theme */
+
+/* 1. Global Variables */
+:root {
+  --primary-color: #4f46e5; /* Indigo */
+  --primary-hover: #4338ca;
+  --accent-color: #ec4899; /* Pink */
+  --bg-dark: #0f172a;      /* Deep Navy */
+  --card-bg: rgba(255, 255, 255, 0.98); /* Almost solid white for readability */
+  --text-main: #111827;    /* Almost Black */
+  --text-muted: #4b5563;   /* Dark Gray */
+  --border-color: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-dark);
+  /* Subtle, dark modern gradient background */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.15), transparent 25%), 
+    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.15), transparent 25%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* 2. Layout & Typography */
 .App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: var(--text-main);
+  margin-top: 0;
+  font-weight: 700;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 3. Forms (Solid, Clean White Panels) */
+.nft-form,
+.listing-form {
+  background: var(--card-bg);
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 35px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 4. Inputs & Labels (High Visibility) */
+label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main); /* Pitch black text */
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-main); /* Dark text inside inputs */
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* File Input Styling */
+input[type='file'] {
+  background: #f9fafb;
+  padding: 10px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+/* 5. Buttons */
+button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 25px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.4);
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.5);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.buy-button {
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 6px -1px rgba(236, 72, 153, 0.4);
+}
+
+.buy-button:hover {
+  background-color: #db2777;
+  box-shadow: 0 6px 8px -1px rgba(236, 72, 153, 0.5);
+}
+
+.connect-btn {
+  background: #ffffff;
+  color: var(--primary-color);
+  width: auto;
+  font-size: 1.1rem;
+  padding: 16px 32px;
+  border-radius: 50px;
+}
+.connect-btn:hover {
+  background: #f3f4f6;
+}
+
+/* 6. Marketplace Grid */
+.marketplace-listings {
+  margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 40px;
+}
+
+.marketplace-listings h2 {
+  color: #fff; /* White title on dark background */
+  font-size: 2rem;
+  border-bottom: none;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.nft-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* 7. NFT Cards (Clean White) */
+.nft-card {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 280px;
+  padding: 15px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nft-card:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nft-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #f3f4f6;
+}
+
+.nft-card h3 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #000; /* Pitch black title */
+}
+
+.nft-card p {
+  color: #374151; /* Dark gray text */
+  font-size: 0.95rem;
+  margin: 6px 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.nft-card p strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Wallet Badge */
+.wallet-address {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+  color: #e2e8f0;
+  font-family: monospace;
+  font-size: 1rem;
 }
